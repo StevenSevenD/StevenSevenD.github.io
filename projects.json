@@ -1,0 +1,88 @@
+[
+  {
+    "id": "combat",
+    "number": "01",
+    "name": "战斗数值模拟器",
+    "english": "Combat Simulator",
+    "category": "desktop",
+    "categoryLabel": "桌面工具",
+    "version": "0.6.1",
+    "description": "把阵容、技能和数值放进同一场战斗，用可复现的模拟观察每次调整带来的变化。",
+    "problem": "战斗策划需要在反复调整属性、技能和阵容时，对比结果并定位差异。",
+    "features": [
+      "五坑位阵容与技能优先级",
+      "Buff / Debuff 与逐行动调试",
+      "批量模拟、历史复现与比较",
+      "按职业配色的单位贡献趋势"
+    ],
+    "stack": [
+      "C#",
+      ".NET 10",
+      "Windows Forms"
+    ],
+    "repo": "https://github.com/StevenSevenD/GameCombatSimulator",
+    "docs": "https://github.com/StevenSevenD/GameCombatSimulator/blob/main/docs/user-guide.md",
+    "image": "assets/combat-formation.png",
+    "caption": "实际程序截图 · 战斗方案",
+    "extraImage": "assets/combat-trends.png",
+    "extraCaption": "实际程序截图 · 单位贡献趋势",
+    "boundary": "Windows 离线运行。支持回合制战斗，当前不考虑移动和战斗中的速度变化。",
+    "validation": "核心测试、桌面自检、Excel 往返及发布包验证；具体范围见仓库文档。"
+  },
+  {
+    "id": "config",
+    "number": "02",
+    "name": "配置蓝图",
+    "english": "Config Blueprint",
+    "category": "desktop",
+    "categoryLabel": "桌面工具",
+    "version": "0.5.0",
+    "description": "从一条游戏配置出发，把跨表引用展开成蓝图，让查找、校验和修改更直观。",
+    "problem": "配置表之间的引用分散在 Excel / JSON 中，逐表追踪依赖容易遗漏关联。",
+    "features": [
+      "递归展示跨表引用关系",
+      "Excel / JSON 数据源与元数据",
+      "条件查询、项目校验和问题定位",
+      "草稿编辑、撤销重做与备份保存"
+    ],
+    "stack": [
+      "TypeScript",
+      "React",
+      "Electron"
+    ],
+    "repo": null,
+    "docs": null,
+    "image": "assets/config-diagram.svg",
+    "caption": "功能示意 · 配置引用关系",
+    "boundary": "Windows 本地工具。引用规则由元数据声明；源码仓库目前私有。",
+    "validation": "提供项目校验、测试和构建脚本；本页面未公开私有仓库的代码或数据。"
+  },
+  {
+    "id": "bridge",
+    "number": "03",
+    "name": "Blueprint Text Bridge",
+    "english": "Unreal Editor Plugin",
+    "category": "engine",
+    "categoryLabel": "引擎插件",
+    "version": "1.3.0",
+    "description": "在 Unreal Editor 中批量导出蓝图图表，预览并追加导入节点文本，连接编辑器与文本工作流。",
+    "problem": "蓝图图表需要可读的导出材料，同时需要在导入节点时明确依赖和变更边界。",
+    "features": [
+      "批量导出图表及结构化清单",
+      "节点文本追加导入与预览",
+      "可读文件名与独立导出目录",
+      "Sokoban 求解与关卡验证接入"
+    ],
+    "stack": [
+      "C++",
+      "Unreal Engine",
+      "Editor Module"
+    ],
+    "repo": "https://github.com/StevenSevenD/UEBlueprintExportImport",
+    "docs": "https://github.com/StevenSevenD/UEBlueprintExportImport/blob/main/BlueprintTextBridge/README.md",
+    "image": "assets/bridge-diagram.svg",
+    "caption": "功能示意 · 蓝图文本工作流",
+    "boundary": "提供 UE 5.5 / 5.7 Win64 构建。仅追加支持的节点，依赖需已存在；不重建整个蓝图。",
+    "validation": "仓库包含两套引擎的导入导出回归报告及求解验证记录，具体范围见使用说明。"
+  }
+]
