@@ -5,3 +5,5 @@ test('accessible landmarks, named modal, responsive viewport and no remote depen
 test('all category filters match dataset and illustrations labelled',()=>{for(const p of projects){assert.ok(html.includes(`data-filter="${p.category}"`));if(p.image.endsWith('.svg'))assert.match(p.caption,/示意/);}assert.match(fs.readFileSync(path.join(root,'app.js'),'utf8'),/aria-pressed/);});
 
 test("all three tool repositories are private; source links are removed",()=>{for(const p of projects){assert.equal(p.repo,null);assert.equal(p.docs,null);assert.match(p.boundary,/私有/);}});
+
+test("visual config uses latest real screenshots and three complex views",()=>{const p=projects.find(p=>p.id==="config");assert.equal(p.name,"可视化配置");assert.equal(p.version,"0.5.0");assert.match(p.caption,/实际程序截图/);assert.equal(p.gallery.length,2);for(const item of p.gallery){assert.ok(fs.existsSync(path.join(root,item.image)));assert.match(item.caption,/实际程序截图/);}assert.match(fs.readFileSync(path.join(root,"app.js"),"utf8"),/打开高清原图/);});

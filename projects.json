@@ -32,8 +32,8 @@
   {
     "id": "config",
     "number": "02",
-    "name": "配置蓝图",
-    "english": "Config Blueprint",
+    "name": "可视化配置",
+    "english": "Visual Config",
     "category": "desktop",
     "categoryLabel": "桌面工具",
     "version": "0.5.0",
@@ -52,10 +52,20 @@
     ],
     "repo": null,
     "docs": null,
-    "image": "assets/config-diagram.svg",
-    "caption": "功能示意 · 配置引用关系",
+    "image": "assets/config-recipe.png",
+    "caption": "实际程序截图 · 配方分支（任务链已折叠）",
     "boundary": "Windows 本地工具。引用规则由元数据声明；源码仓库目前私有。",
-    "validation": "提供项目校验、测试和构建脚本；本页面未公开私有仓库的代码或数据。"
+    "validation": "使用最新 0.5.0 Windows 工具加载内置 RPG 样例，展示真实多层引用关系；截图只包含工作区，不公开源码或本机路径。",
+    "gallery": [
+      {
+        "image": "assets/config-quest.png",
+        "caption": "实际程序截图 · 任务引用全景：27 个节点、42 条连线"
+      },
+      {
+        "image": "assets/config-dungeon.png",
+        "caption": "实际程序截图 · 副本跨表引用全景：43 个节点"
+      }
+    ]
   },
   {
     "id": "bridge",
