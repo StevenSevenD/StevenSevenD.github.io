@@ -20,13 +20,13 @@
       ".NET 10",
       "Windows Forms"
     ],
-    "repo": "https://github.com/StevenSevenD/GameCombatSimulator",
-    "docs": "https://github.com/StevenSevenD/GameCombatSimulator/blob/main/docs/user-guide.md",
+    "repo": null,
+    "docs": null,
     "image": "assets/combat-formation.png",
     "caption": "实际程序截图 · 战斗方案",
     "extraImage": "assets/combat-trends.png",
     "extraCaption": "实际程序截图 · 单位贡献趋势",
-    "boundary": "Windows 离线运行。支持回合制战斗，当前不考虑移动和战斗中的速度变化。",
+    "boundary": "Windows 离线运行。支持回合制战斗，当前不考虑移动和战斗中的速度变化。 源码仓库目前私有。",
     "validation": "核心测试、桌面自检、Excel 往返及发布包验证；具体范围见仓库文档。"
   },
   {
@@ -78,11 +78,11 @@
       "Unreal Engine",
       "Editor Module"
     ],
-    "repo": "https://github.com/StevenSevenD/UEBlueprintExportImport",
-    "docs": "https://github.com/StevenSevenD/UEBlueprintExportImport/blob/main/BlueprintTextBridge/README.md",
+    "repo": null,
+    "docs": null,
     "image": "assets/bridge-diagram.svg",
     "caption": "功能示意 · 蓝图文本工作流",
-    "boundary": "提供 UE 5.5 / 5.7 Win64 构建。仅追加支持的节点，依赖需已存在；不重建整个蓝图。",
+    "boundary": "提供 UE 5.5 / 5.7 Win64 构建。仅追加支持的节点，依赖需已存在；不重建整个蓝图。 源码仓库目前私有。",
     "validation": "仓库包含两套引擎的导入导出回归报告及求解验证记录，具体范围见使用说明。"
   }
 ]

@@ -3,3 +3,5 @@ test('three unique tools with grounded content and valid assets',()=>{assert.equ
 test('private source is not exposed or represented by a dead public button',()=>{const config=projects.find(p=>p.id==='config');assert.equal(config.repo,null);assert.equal(config.docs,null);assert.match(config.boundary,/私有/);});
 test('accessible landmarks, named modal, responsive viewport and no remote dependencies',()=>{assert.match(html,/<html lang="zh-CN"/);assert.match(html,/name="viewport"/);assert.match(html,/aria-labelledby="dialog-title"/);assert.match(html,/class="skip"/);assert.match(html,/rel="noopener noreferrer"/);assert.doesNotMatch(html,/<script[^>]*src="https?:/);});
 test('all category filters match dataset and illustrations labelled',()=>{for(const p of projects){assert.ok(html.includes(`data-filter="${p.category}"`));if(p.image.endsWith('.svg'))assert.match(p.caption,/示意/);}assert.match(fs.readFileSync(path.join(root,'app.js'),'utf8'),/aria-pressed/);});
+
+test("all three tool repositories are private; source links are removed",()=>{for(const p of projects){assert.equal(p.repo,null);assert.equal(p.docs,null);assert.match(p.boundary,/私有/);}});
